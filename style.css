@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: #ffffff;
+  max-width: 650px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #495057;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #3b82f6;
+}
+
+.error-input {
+  border-color: #dc3545 !important;
+}
+
+.error-msg {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  min-height: 16px;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 520px) {
+  .subject-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.result-section {
+  margin-top: 25px;
+  border-top: 2px dashed #dee2e6;
+  padding-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.result-table th, .result-table td {
+  border: 1px solid #e9ecef;
+  padding: 10px;
+  text-align: left;
+}
+
+.result-table th {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.summary-box {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+}
+
+.avg-highlight {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.badge-gioi { background-color: #d1fae5; color: #065f46; }
+.badge-kha { background-color: #dbeafe; color: #1e40af; }
+.badge-tb { background-color: #fef3c7; color: #92400e; }
+.badge-yeu { background-color: #fee2e2; color: #991b1b; }
