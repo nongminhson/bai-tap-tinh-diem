@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tính Điểm Sinh Viên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Quản Lý Điểm Sinh Viên</h2>
+
+    <form id="scoreForm">
+      <div class="form-group">
+        <label for="studentName">Họ và tên sinh viên:</label>
+        <input type="text" id="studentName" placeholder="Nhập họ và tên..." autocomplete="off">
+        <small class="error-msg" id="nameError"></small>
+      </div>
+
+      <div class="subject-grid">
+        <div class="form-group">
+          <label for="score1">Giải tích 1:</label>
+          <input type="number" id="score1" step="0.1" min="0" max="10" placeholder="0 - 10">
+          <small class="error-msg" id="err1"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="score2">Đại số tuyến tính:</label>
+          <input type="number" id="score2" step="0.1" min="0" max="10" placeholder="0 - 10">
+          <small class="error-msg" id="err2"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="score3">Xác suất thống kê:</label>
+          <input type="number" id="score3" step="0.1" min="0" max="10" placeholder="0 - 10">
+          <small class="error-msg" id="err3"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="score4">Tin học đại cương:</label>
+          <input type="number" id="score4" step="0.1" min="0" max="10" placeholder="0 - 10">
+          <small class="error-msg" id="err4"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="score5">Xây dựng ứng dụng Web:</label>
+          <input type="number" id="score5" step="0.1" min="0" max="10" placeholder="0 - 10">
+          <small class="error-msg" id="err5"></small>
+        </div>
+      </div>
+
+      <button type="submit" id="btnCalculate">Tính kết quả</button>
+    </form>
+
+    <div id="resultSection" class="result-section hidden">
+      <h3>Kết Quả Học Tập</h3>
+      <p><strong>Họ và tên:</strong> <span id="resName"></span></p>
+
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Môn học</th>
+            <th>Điểm số</th>
+          </tr>
+        </thead>
+        <tbody id="resultTableBody"></tbody>
+      </table>
+
+      <div class="summary-box">
+        <p><strong>Điểm trung bình:</strong> <span id="resAvg" class="avg-highlight"></span></p>
+        <p><strong>Xếp loại:</strong> <span id="resRank" class="badge"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
